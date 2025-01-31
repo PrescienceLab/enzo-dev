@@ -57,12 +57,12 @@ MACH_DEFINES   = -DLINUX -DH5_USE_16_API
 #-----------------------------------------------------------------------
 
 
-MACH_CPPFLAGS = -P -traditional 
-MACH_CFLAGS   = 
-MACH_CXXFLAGS =
-MACH_FFLAGS   = -std=legacy -fno-second-underscore -ffixed-line-length-132
-MACH_F90FLAGS = -std=legacy -fno-second-underscore
-MACH_LDFLAGS  = 
+MACH_CPPFLAGS = -P -traditional  -fno-pic -fno-pie
+MACH_CFLAGS   = -fno-pic -no-pie
+MACH_CXXFLAGS = -fno-pic -no-pie
+MACH_FFLAGS   = -std=legacy -fno-second-underscore -ffixed-line-length-132 -fno-pic -no-pie
+MACH_F90FLAGS = -std=legacy -fno-second-underscore -fno-pic -no-pie
+MACH_LDFLAGS  = -fno-pic -no-pie
 
 #-----------------------------------------------------------------------
 # Optimization flags
